@@ -1,9 +1,9 @@
 import {Link, Outlet} from "react-router-dom";
 import React, {useContext} from "react";
-import {UserContext, UserProvider} from "../../context/User.context.jsx"
+import {UserContext} from "../../context/User.context.jsx"
 import {signOutUser} from "../../utils/firebase/firbase.utils";
 export default function Navigation () {
-    const {currentUser, setCurrentUser} = useContext(UserContext);
+    const {currentUser} = useContext(UserContext);
 
 
     async function signOutHandler() {
